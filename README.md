@@ -22,9 +22,9 @@ smbclient -L $ip
 ```
 
 ## dirbuster
-wordlist: /usr/share/wordlists/dirb/common.txt
-URL to fuzz (find file in unknown folder)
-/{dir}/phpbash.min.php
+wordlist: /usr/share/wordlists/dirb/common.txt  
+URL to fuzz (find file in unknown folder)  
+/{dir}/phpbash.min.php  
 
 ## Gobuster HTTP Enumeration
 ```bash
