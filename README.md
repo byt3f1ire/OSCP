@@ -69,6 +69,18 @@ powershell Get-Content -Path "hm.txt" -Stream "root.txt"
 ## LinEnum.sh
 https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
+## Metasploit Local Exploit Suggester
+```bash
+meterpreter > cd %TEMP%
+meterpreter > pwd
+C:\Windows\TEMP
+meterpreter > background
+use post/multi/recon/local_exploit_suggester
+msf5 post(multi/recon/local_exploit_suggester) > set SESSION 1
+SESSION => 1
+msf5 post(multi/recon/local_exploit_suggester) > run
+```
+
 ## GTFOBIns
 https://gtfobins.github.io/ 
 
