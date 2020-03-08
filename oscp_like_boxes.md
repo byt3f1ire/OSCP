@@ -19,7 +19,7 @@
 # Windows
 - [x] legacy
 - [x] blue
-- [ ] devel
+- [x] devel
 - [ ] optimum
 - [ ] bastard
 - [ ] granny
