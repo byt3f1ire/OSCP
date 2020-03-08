@@ -1,3 +1,39 @@
+# RECON
+## Initial Nmap Scan
+```bash
+nmap -Pn -sC -sV -oA nmap $ip
+```
+
+## Enumeration Checklists
+https://github.com/theonlykernel/enumeration/wiki
+https://medium.com/oscp-cheatsheet/oscp-cheatsheet-6c80b9fa8d7e
+
+## WPscan for wordpress
+```bash
+wpscan --disable-tls-checks --url $url
+```
+
+## Samba
+```bash
+auxiliary/scanner/smb/smb_version
+nmblookup -A $ip
+smbclient -L $ip
+```
+
+## dirbuster
+wordlist: /usr/share/wordlists/dirb/common.txt
+URL to fuzz (find file in unknown folder)
+/{dir}/phpbash.min.php
+
+## Gobuster HTTP Enumeration
+```bash
+./gobuster dir -u $url -w /usr/share/wordlists/dirb/common.txt
+```
+
+
+
+
+
 # GENERAL
 ## Kali Configuration
 ```bash
