@@ -113,3 +113,25 @@ python -c 'import pty; pty.spawn("/bin/bash");'
 #on Kali listen with
 nc -nvlp 1234
 ```
+# Password Cracking
+## John
+```bash
+john --wordlist=/home/mallab/Downloads/rockyou.txt htpasswd.txt 
+```
+
+## SSH Private Key / id_rsa
+```bash
+python /usr/share/john/ssh2john.py id_rsa > id_rsa.hash
+sudo john --wordlist=rockyou.txt id_rsa.hash
+```
+
+## ZIP Archive
+```bash
+/usr/sbin/zip2john avedb.zip > avedb.zip.hashes
+sudo john --wordlist=rockyou.txt avedb.zip.hashes
+```
+
+## KDBX Keepassa
+```bash
+sudo keepass2john jeeves.kdbx > jeeves.hash
+```
