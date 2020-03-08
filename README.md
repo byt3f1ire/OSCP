@@ -6,8 +6,8 @@ nmap -Pn -sC -sV -oA nmap $ip
 ```
 
 ## Enumeration Checklists
-https://github.com/theonlykernel/enumeration/wiki
-https://medium.com/oscp-cheatsheet/oscp-cheatsheet-6c80b9fa8d7e
+https://github.com/theonlykernel/enumeration/wiki  
+https://medium.com/oscp-cheatsheet/oscp-cheatsheet-6c80b9fa8d7e  
 
 ## WPscan for wordpress
 ```bash
