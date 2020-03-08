@@ -30,9 +30,10 @@ URL to fuzz (find file in unknown folder)
 ```bash
 ./gobuster dir -u $url -w /usr/share/wordlists/dirb/common.txt
 ```
-
-
-
+## FTP
+```bash
+nmap -sV -Pn -vv -p 21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221 $ip
+```
 
 
 # GENERAL
