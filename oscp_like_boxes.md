@@ -1,8 +1,8 @@
 # Linux
-- [ ] Lame
-- [ ] brainfuck
-- [ ] shocker
-- [ ] bashed
+- [x] Lame
+- [x] brainfuck
+- [x] shocker
+- [x] bashed
 - [ ] nibbles
 - [ ] beep
 - [ ] cronos
@@ -17,8 +17,8 @@
 - [ ] tartarsauce
 
 # Windows
-- [ ] legacy
-- [ ] blue
+- [x] legacy
+- [x] blue
 - [ ] devel
 - [ ] optimum
 - [ ] bastard
@@ -30,7 +30,7 @@
 - [ ] jerry
 
 # More challenging
-- [ ] jeeves [windows]
+- [x] jeeves [windows]
 - [ ] bart [w]
 - [ ] tally [w}
 - [ ] active [w]
