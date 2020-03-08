@@ -1,6 +1,7 @@
 # RECON
 ## Initial Nmap Scan
 ```bash
+ip="10.10.10.5"
 nmap -Pn -sC -sV -oA nmap $ip
 ```
 
